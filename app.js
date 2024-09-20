@@ -29,7 +29,7 @@ app.get('/send-mail',(req,res)=>{
     
 })
 
-app.post('/sand-mail',(req,res)=>{
+app.post('/send-mail',(req,res)=>{
 
     const reciver  = {
         from: 'tjoy4799@gmail.com',
