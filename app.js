@@ -2,7 +2,7 @@ const express = require('express');
 const nodemailer = require('nodemailer')
 const app = express();
 app.use(express.urlencoded({extended:true}))
-app.use(express.static('public'))
+app.use(express.static('docs'))
 
 const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -25,7 +25,7 @@ function aFunc(reciver){
 }
 
 app.get('/send-mail',(req,res)=>{
-    res.sendFile(__dirname+'/public/index.html')
+    res.sendFile(__dirname+'/docs/index.html')
     
 })
 
